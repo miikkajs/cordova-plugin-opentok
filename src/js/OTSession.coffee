@@ -121,7 +121,7 @@ class TBSession
     element = streamElements[ elementId ]
     if(element)
       element.parentNode.removeChild(element)
-      delete( streamElements[ streamId ] )
+      delete( streamElements[ elementId ] )
       TBUpdateObjects()
     return Cordova.exec(TBSuccess, TBError, OTPlugin, "unsubscribe", [subscriber.streamId] )
 
